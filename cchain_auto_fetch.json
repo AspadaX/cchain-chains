@@ -1,0 +1,94 @@
+[
+  {
+    "command": "git",
+    "arguments": [
+      "switch",
+      "main"
+    ],
+    "interpreter": null,
+    "environment_variables_override": {},
+    "stdout_stored_to": null,
+    "stdout_storage_options": {
+      "without_newline_characters": true
+    },
+    "failure_handling_options": {
+      "exit_on_failure": true,
+      "remedy_command_line": null
+    },
+    "concurrency_group": null,
+    "retry": 0
+  },
+  {
+    "command": "git",
+    "arguments": [
+      "fetch"
+    ],
+    "interpreter": null,
+    "environment_variables_override": null,
+    "stdout_stored_to": null,
+    "stdout_storage_options": {
+      "without_newline_characters": true
+    },
+    "failure_handling_options": {
+      "exit_on_failure": true,
+      "remedy_command_line": null
+    },
+    "concurrency_group": null,
+    "retry": 0
+  },
+  {
+    "command": "git",
+    "arguments": [
+      "pull"
+    ],
+    "interpreter": null,
+    "environment_variables_override": null,
+    "stdout_stored_to": null,
+    "stdout_storage_options": {
+      "without_newline_characters": true
+    },
+    "failure_handling_options": {
+      "exit_on_failure": true,
+      "remedy_command_line": null
+    },
+    "concurrency_group": null,
+    "retry": 0
+  },
+  {
+    "command": "git",
+    "arguments": [
+      "branch"
+    ],
+    "interpreter": null,
+    "environment_variables_override": null,
+    "stdout_stored_to": null,
+    "stdout_storage_options": {
+      "without_newline_characters": true
+    },
+    "failure_handling_options": {
+      "exit_on_failure": true,
+      "remedy_command_line": null
+    },
+    "concurrency_group": null,
+    "retry": 0
+  },
+  {
+    "command": "git",
+    "arguments": [
+      "switch",
+      "<<branch_to_switch:on_program_execution>>"
+    ],
+    "interpreter": null,
+    "environment_variables_override": null,
+    "stdout_stored_to": null,
+    "stdout_storage_options": {
+      "without_newline_characters": true
+    },
+    "failure_handling_options": {
+      "exit_on_failure": true,
+      "remedy_command_line": null
+    },
+    "concurrency_group": null,
+    "retry": 0
+  }
+]
