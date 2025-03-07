@@ -1,80 +1,86 @@
 [
   {
-    "command": "git",
+    "command": "date",
     "arguments": [
-      "switch",
-      "main"
+      "+%F"
     ],
-    "interpreter": null,
-    "environment_variables_override": null,
-    "stdout_stored_to": null,
+    "environment_variables_override": {},
+    "stdout_stored_to": "<<datetime>>",
     "stdout_storage_options": {
       "without_newline_characters": true
     },
-    "failure_handling_options": {
-      "exit_on_failure": false,
-      "remedy_command_line": {
-        "command": "git",
-        "arguments": ["switch", "master"]
-      }
-    },
-    "concurrency_group": null,
+    "interpreter": "sh",
     "retry": 0
   },
   {
-    "command": "git",
+    "command": "mkdir",
     "arguments": [
-      "branch",
-      "<<new_branch_name>>"
+      "./<<branch>>-<<datetime>>"
     ],
-    "interpreter": null,
     "environment_variables_override": {},
     "stdout_stored_to": null,
-    "stdout_storage_options": {
-      "without_newline_characters": true
-    },
-    "failure_handling_options": {
-      "exit_on_failure": true,
-      "remedy_command_line": null
-    },
-    "concurrency_group": null,
+    "interpreter": null,
     "retry": 0
   },
   {
     "command": "git",
     "arguments": [
-      "switch",
-      "<<new_branch_name>>"
+      "clone",
+      "https://github.com/<<owner>>/<<repository>>",
+      "./<<branch>>-<<datetime>>/<<repository>>"
     ],
-    "interpreter": null,
-    "environment_variables_override": null,
-    "stdout_stored_to": null,
-    "stdout_storage_options": {
-      "without_newline_characters": true
-    },
+    "environment_variables_override": {},
     "failure_handling_options": {
       "exit_on_failure": true,
-      "remedy_command_line": null
+      "remedy_command_line": {
+        "command": "rm",
+        "arguments": [
+          "-rf",
+          "./<<branch>>-<<datetime>>"
+        ]
+      }
     },
-    "concurrency_group": null,
+    "stdout_stored_to": null,
+    "interpreter": null,
     "retry": 0
   },
   {
-    "command": "echo",
+    "command": "git",
     "arguments": [
-      "Branch <<new_branch_name>> has been created locally. It will be published once you use `git push`."
+      "-C",
+      "./<<branch>>-<<datetime>>/<<repository>>",
+      "checkout",
+      "-b",
+      "<<branch>>"
     ],
+    "environment_variables_override": {},
+    "stdout_stored_to": null,
     "interpreter": null,
+    "retry": 0
+  },
+  {
+    "command": "git",
+    "arguments": [
+      "-C",
+      "./<<branch>>-<<datetime>>/<<repository>>",
+      "push",
+      "-u",
+      "origin",
+      "<<branch>>"
+    ],
+    "environment_variables_override": {},
+    "stdout_stored_to": null,
+    "interpreter": null,
+    "retry": 0
+  },
+  {
+    "command": "zed",
+    "arguments": [
+      "./<<branch>>-<<datetime>>/<<repository>>"
+    ],
     "environment_variables_override": null,
     "stdout_stored_to": null,
-    "stdout_storage_options": {
-      "without_newline_characters": true
-    },
-    "failure_handling_options": {
-      "exit_on_failure": true,
-      "remedy_command_line": null
-    },
-    "concurrency_group": null,
+    "interpreter": null,
     "retry": 0
   }
 ]
