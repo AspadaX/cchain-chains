@@ -1,6 +1,16 @@
 # cchain-chains
 A remote storage that hosts publicly available automation configurations of cchain
 
+# How to use this?
+You may want to know about [`cchain`](https://github.com/AspadaX/cchain) if this is new to you. 
+
+Then, you could use `ctrl + f` or `cmd + f` (on Macs) to search for whatever automation scripts you want here. 
+
+Also, feel free to `git clone` this repo to your local directory, so that you can use the following command to bookmark them:
+```bash
+cchain add ./cchain-chains
+```
+
 # Indexes
 
 ## [Automatically fetch a repository](cchain_auto_fetch.json)
