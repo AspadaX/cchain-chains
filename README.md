@@ -4,7 +4,7 @@ A remote storage that hosts publicly available automation configurations of ccha
 # Indexes
 
 ## [Automatically fetch a repository](cchain_auto_fetch.json)
-This chain allows you to automatically pull and fetch the original repo. 
+This chain allows you to pull and fetch the original repo all at once. 
 
 ## [Make a git automatically](cchain_auto_git.json)
 It git commit and git push your changes automatically. It also uses LLMs to generate commit messages. On failure, it will use git reset to unset the commits. 
