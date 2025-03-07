@@ -11,3 +11,6 @@ It git commit and git push your changes automatically. It also uses LLMs to gene
 
 ## [Make git automatically without using LLMs](cchain_auto_git_without_llm.json)
 Auto git, but without LLMs. You will have to manually input a git commit message. 
+
+## [Create a new branch in both local and remote](cchain_new_branch.json)
+Then, it will open `zed` IDE for you. You may change that to `code` for opening VSCode instead. 
