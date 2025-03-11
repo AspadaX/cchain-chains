@@ -1,0 +1,48 @@
+[
+  {
+    "command": "pip",
+    "arguments": [
+      "install",
+      "-U",
+      "huggingface_hub"
+    ],
+    "interpreter": null,
+    "environment_variables_override": null,
+    "working_directory": null,
+    "stdout_stored_to": null,
+    "stdout_storage_options": {
+      "without_newline_characters": true
+    },
+    "failure_handling_options": {
+      "exit_on_failure": true,
+      "remedy_command_line": null
+    },
+    "concurrency_group": null,
+    "retry": 0
+  },
+  {
+    "command": "huggingface-cli",
+    "arguments": [
+      "download",
+      "--resume-download",
+      "<<repo_to_download>>",
+      "--local-dir",
+      "<<repo_to_download>>"
+    ],
+    "interpreter": "Sh",
+    "environment_variables_override": {
+      "HF_ENDPOINT": "https://hf-mirror.com"
+    },
+    "working_directory": null,
+    "stdout_stored_to": null,
+    "stdout_storage_options": {
+      "without_newline_characters": true
+    },
+    "failure_handling_options": {
+      "exit_on_failure": true,
+      "remedy_command_line": null
+    },
+    "concurrency_group": null,
+    "retry": 0
+  }
+]
