@@ -9,8 +9,11 @@
       "without_newline_characters": true
     },
     "failure_handling_options": {
-      "exit_on_failure": true,
-      "remedy_command_line": null
+      "exit_on_failure": false,
+      "remedy_command_line": {
+        "command": "git",
+        "arguments": ["switch", "master"]
+      }
     },
     "concurrency_group": null,
     "retry": 0
