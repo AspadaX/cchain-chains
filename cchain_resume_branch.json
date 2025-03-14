@@ -1,0 +1,70 @@
+[
+  {
+    "command": "date",
+    "arguments": [
+      "+%F"
+    ],
+    "environment_variables_override": {},
+    "stdout_stored_to": "<<datetime>>",
+    "stdout_storage_options": {
+      "without_newline_characters": true
+    },
+    "interpreter": "sh",
+    "retry": 0
+  },
+  {
+    "command": "mkdir",
+    "arguments": [
+      "./<<branch>>-<<datetime>>"
+    ],
+    "environment_variables_override": {},
+    "stdout_stored_to": null,
+    "interpreter": null,
+    "retry": 0
+  },
+  {
+    "command": "git",
+    "arguments": [
+      "clone",
+      "https://github.com/<<owner>>/<<repository>>",
+      "./<<branch>>-<<datetime>>/<<repository>>"
+    ],
+    "environment_variables_override": {},
+    "failure_handling_options": {
+      "exit_on_failure": true,
+      "remedy_command_line": {
+        "command": "rm",
+        "arguments": [
+          "-rf",
+          "./<<branch>>-<<datetime>>"
+        ]
+      }
+    },
+    "stdout_stored_to": null,
+    "interpreter": null,
+    "retry": 0
+  },
+  {
+    "command": "git",
+    "arguments": [
+      "-C",
+      "./<<branch>>-<<datetime>>/<<repository>>",
+      "switch",
+      "<<branch>>"
+    ],
+    "environment_variables_override": {},
+    "stdout_stored_to": null,
+    "interpreter": null,
+    "retry": 0
+  },
+  {
+    "command": "zed",
+    "arguments": [
+      "./<<branch>>-<<datetime>>/<<repository>>"
+    ],
+    "environment_variables_override": null,
+    "stdout_stored_to": null,
+    "interpreter": null,
+    "retry": 0
+  }
+]
