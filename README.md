@@ -25,5 +25,8 @@ Auto git, but without LLMs. You will have to manually input a git commit message
 ## [Create a new branch in both local and remote](cchain_new_branch.json)
 Then, it will open `zed` IDE for you. You may change that to `code` for opening VSCode instead. 
 
+## [Setup an existing branch in a repo locally](cchain_resume_branch.json)
+If you have a branch already in the remote repo, this chain will clone that repo with the specified branch, and it will open `zed` IDE for you. 
+
 ## [Use HF Mirror to download a model from within China](cchain_hf_download.json)
 This chain allows you to download a model from HF Mirror, which works perfetcly in China. 
