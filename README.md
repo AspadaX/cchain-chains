@@ -30,3 +30,6 @@ If you have a branch already in the remote repo, this chain will clone that repo
 
 ## [Use HF Mirror to download a model from within China](cchain_hf_download.json)
 This chain allows you to download a model from HF Mirror, which works perfetcly in China. 
+
+## [Generate bindings for C code to be called in Rust](cchain_generate_c_rust_bindings.json)
+Use bindgen to generate `bindings.rs` file that can be used for Rust to call C codes. The wrapper header file needs to be placed under the root directory of the Rust project and needs to be named as `wrapper.h`
