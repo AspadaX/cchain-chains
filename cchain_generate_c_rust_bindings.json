@@ -1,0 +1,23 @@
+[
+  {
+    "command": "bindgen",
+    "arguments": [
+      "./wrapper.h",
+      "-o",
+      "./src/bindings.rs"
+    ],
+    "interpreter": null,
+    "environment_variables_override": null,
+    "working_directory": null,
+    "stdout_stored_to": null,
+    "stdout_storage_options": {
+      "without_newline_characters": true
+    },
+    "failure_handling_options": {
+      "exit_on_failure": true,
+      "remedy_command_line": null
+    },
+    "concurrency_group": null,
+    "retry": 0
+  }
+]
