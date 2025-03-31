@@ -6,7 +6,7 @@
   },
   {
     "command": "git",
-    "arguments": ["commit", "-m", "llm_generate('based on the below git diff output, generate a git commit message by making a high level summary', 'git --no-pager diff --staged')"],
+    "arguments": ["commit", "-m", "llm_generate('Write a git commit message for this commit. No redundant words like: here is a commit message blahblah', 'git --no-pager diff --staged')"],
     "failure_handling_options": {
       "exit_on_failure": true,
       "remedy_command_line": {
